@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, blue, green);
+}
+
+
+.App {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 85px);
+    align-content: center;
+    justify-content: center;
+}
+
+.App > button {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-size: 25px;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.App > button:hover,
+.App > button:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.calc_display {
+    background: rgba(0, 0, 0, 0.7);
+    grid-column: -1/1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.calc_display .display_previous {
+    color:rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+}
+
+.calc_display .display_current {
+    color:rgba(255, 255, 255, 0.9);
+    font-size: 30px;
+}
+
+.span-two {
+    grid-column: span 2;
+}
